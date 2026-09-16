@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python / Jupyter / AI
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+.env
+venv/
+env/
+*.h5
+*.pb
+*.pt
+*.pth
+
+# Java
+*.class
+*.jar
+*.war
+target/
+build/
+.idea/
+
+# C / C++
+*.o
+*.obj
+*.exe
+*.out
+CMakeFiles/
+cmake-build-debug/
+
+# Временные файлы
+*.log
+*.tmp
+*.swp

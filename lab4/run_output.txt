@@ -1,0 +1,38 @@
+Количество строк: 178
+Количество столбцов: 14
+Пропущенные значения:
+Alcohol                         0
+Malic Acid                      0
+Ash                             0
+Alcalinity of ash               0
+Magnesium                       0
+Total phenols                   0
+Flavanoids                      0
+Nonflavanoid phenols            0
+Proanthocyanins                 0
+Color intensity                 0
+Hue                             0
+OD280/OD315 of diluted wines    0
+Proline                         0
+Wine                            0
+Категориальные признаки: нет
+Модель 1 — случайные признаки: Nonflavanoid phenols, Total phenols, Hue, Alcohol, Proline
+Модель 2 — фиксированные признаки: Alcohol, Flavanoids, Color intensity, OD280/OD315 of diluted wines, Proline
+Размер обучающей выборки: 133
+Размер тестовой выборки: 45
+
+Точность классификации:
+         model  k accuracy
+model_1_random  1   0.9333
+model_1_random  3   0.9556
+model_1_random  5   0.9778
+model_1_random  7   0.9556
+model_1_random 10   0.9333
+ model_2_fixed  1   0.9556
+ model_2_fixed  3   0.9556
+ model_2_fixed  5   0.9778
+ model_2_fixed  7   0.9778
+ model_2_fixed 10   0.9778
+
+Лучший результат: model_1_random, k=5, accuracy=0.9778
+Результаты сохранены в: /Users/khlopensky/Desktop/ИТМО/СИИ_5/lab4/knn_wine_lab/results

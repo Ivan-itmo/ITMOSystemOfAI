@@ -1,0 +1,22 @@
+корень -> признак: odor (класс=0, P(ядовитый)=0.482)
+  odor=a -> класс=0, P(ядовитый)=0.000
+  odor=c -> класс=1, P(ядовитый)=1.000
+  odor=f -> класс=1, P(ядовитый)=1.000
+  odor=l -> класс=0, P(ядовитый)=0.000
+  odor=m -> класс=1, P(ядовитый)=1.000
+  odor=n -> признак: spore-print-color (класс=0, P(ядовитый)=0.033)
+    spore-print-color=b -> класс=0, P(ядовитый)=0.000
+    spore-print-color=h -> класс=0, P(ядовитый)=0.000
+    spore-print-color=k -> класс=0, P(ядовитый)=0.000
+    spore-print-color=n -> класс=0, P(ядовитый)=0.000
+    spore-print-color=o -> класс=0, P(ядовитый)=0.000
+    spore-print-color=r -> класс=1, P(ядовитый)=1.000
+    spore-print-color=w -> признак: stalk-color-below-ring (класс=0, P(ядовитый)=0.078)
+      stalk-color-below-ring=e -> класс=0, P(ядовитый)=0.000
+      stalk-color-below-ring=n -> класс=0, P(ядовитый)=0.226
+      stalk-color-below-ring=w -> класс=0, P(ядовитый)=0.021
+      stalk-color-below-ring=y -> класс=1, P(ядовитый)=1.000
+    spore-print-color=y -> класс=0, P(ядовитый)=0.000
+  odor=p -> класс=1, P(ядовитый)=1.000
+  odor=s -> класс=1, P(ядовитый)=1.000
+  odor=y -> класс=1, P(ядовитый)=1.000

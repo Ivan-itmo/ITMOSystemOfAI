@@ -17,7 +17,7 @@ from knn import KNNClassifier, accuracy_score, confusion_matrix
 
 TARGET = "Wine"
 SEED = 42
-TEST_SIZE = 0.25
+TEST_SIZE = 0.2
 K_VALUES = [1, 3, 5, 7, 10]
 RANDOM_FEATURE_COUNT = 5
 # Заранее выбранные признаки второй модели.

@@ -22,7 +22,7 @@ def encode_categorical_features(df, target_column):
     return features, categorical
 
 
-def stratified_split(y, test_size=0.25, seed=42):
+def stratified_split(y, test_size=0.2, seed=42):
     y = np.asarray(y)
     rng = np.random.default_rng(seed)
     train_indices = []
@@ -59,7 +59,7 @@ def impute_numeric(train_df, test_df):
 
 
 def standardize(train_df, test_df):
-    # Параметры масштаба вычисляем только на обучающих данных.
+    # Параметры масштаба вычисляем только на обучающих данных, Z-score
     mean = train_df.mean(axis=0)
     std = train_df.std(axis=0, ddof=0).replace(0, 1)
     train_scaled = (train_df - mean) / std

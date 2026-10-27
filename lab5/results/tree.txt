@@ -4,18 +4,20 @@
   odor=f -> класс=1, P(ядовитый)=1.000
   odor=l -> класс=0, P(ядовитый)=0.000
   odor=m -> класс=1, P(ядовитый)=1.000
-  odor=n -> признак: spore-print-color (класс=0, P(ядовитый)=0.033)
+  odor=n -> признак: spore-print-color (класс=0, P(ядовитый)=0.035)
     spore-print-color=b -> класс=0, P(ядовитый)=0.000
     spore-print-color=h -> класс=0, P(ядовитый)=0.000
     spore-print-color=k -> класс=0, P(ядовитый)=0.000
     spore-print-color=n -> класс=0, P(ядовитый)=0.000
     spore-print-color=o -> класс=0, P(ядовитый)=0.000
     spore-print-color=r -> класс=1, P(ядовитый)=1.000
-    spore-print-color=w -> признак: stalk-color-below-ring (класс=0, P(ядовитый)=0.078)
-      stalk-color-below-ring=e -> класс=0, P(ядовитый)=0.000
-      stalk-color-below-ring=n -> класс=0, P(ядовитый)=0.226
-      stalk-color-below-ring=w -> класс=0, P(ядовитый)=0.021
-      stalk-color-below-ring=y -> класс=1, P(ядовитый)=1.000
+    spore-print-color=w -> признак: gill-size (класс=0, P(ядовитый)=0.069)
+      gill-size=b -> класс=0, P(ядовитый)=0.000
+      gill-size=n -> признак: stalk-surface-above-ring (класс=0, P(ядовитый)=0.479)
+        stalk-surface-above-ring=f -> класс=0, P(ядовитый)=0.000
+        stalk-surface-above-ring=k -> класс=1, P(ядовитый)=1.000
+        stalk-surface-above-ring=s -> класс=0, P(ядовитый)=0.200
+        stalk-surface-above-ring=y -> класс=1, P(ядовитый)=1.000
     spore-print-color=y -> класс=0, P(ядовитый)=0.000
   odor=p -> класс=1, P(ядовитый)=1.000
   odor=s -> класс=1, P(ядовитый)=1.000

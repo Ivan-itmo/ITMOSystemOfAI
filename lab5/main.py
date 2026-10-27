@@ -30,8 +30,17 @@ DATA_PATH = BASE_DIR / "data" / "agaricus-lepiota.data"
 RESULTS_DIR = BASE_DIR / "results"
 TARGET = "class"
 TEST_SIZE = 0.2
-SPLIT_SEED = 42
+SPLIT_SEED = 67
 FEATURE_SEED = 10
+FEATURE_MODE = "preselected" # "random" для случайного выбора
+PRESELECTED_FEATURES = [
+    "odor", # запах - 0.391017
+    "gill-size", # размер пластинок - 0.249915
+    "stalk-surface-above-ring", # поверхность ножки над кольцом - 0.249915
+    "spore-print-color", # цвет спорового отпечатка - 0.220998
+
+    # выбраны по лучшему gain ratio (после перевода стоит)
+]
 
 
 def main():
@@ -39,7 +48,16 @@ def main():
 
     df = load_dataset(DATA_PATH)
     feature_names = [column for column in df.columns if column != TARGET]
-    selected_features = select_random_sqrt_features(feature_names, seed=FEATURE_SEED)
+    if FEATURE_MODE == "random":
+        selected_features = select_random_sqrt_features(feature_names, seed=FEATURE_SEED)
+    elif FEATURE_MODE == "preselected":
+        selected_features = PRESELECTED_FEATURES.copy()
+        if len(selected_features) != int(np.sqrt(len(feature_names))):
+            raise ValueError("Нужно заранее выбрать int(sqrt(n)) признаков")
+        if len(set(selected_features)) != len(selected_features) or not set(selected_features) <= set(feature_names):
+            raise ValueError("Выбранные признаки должны существовать и не повторяться")
+    else:
+        raise ValueError("FEATURE_MODE должен быть random или preselected")
 
     train_df, test_df = stratified_train_test_split(df, TARGET, TEST_SIZE, SPLIT_SEED)
 
@@ -75,7 +93,8 @@ def main():
         f"Строк после удаления дубликатов: {len(df)}\n"
         f"Признаков всего: {len(feature_names)}\n"
         f"sqrt(n) -> выбрано признаков: {len(selected_features)}\n"
-        f"Случайно выбранные признаки: {', '.join(selected_features)}\n"
+        f"Режим выбора признаков: {FEATURE_MODE}\n"
+        f"Выбранные признаки: {', '.join(selected_features)}\n"
         f"Обучающая выборка: {len(train_df)}\n"
         f"Тестовая выборка: {len(test_df)}\n"
         f"Accuracy: {accuracy:.6f}\n"

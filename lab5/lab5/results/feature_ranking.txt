@@ -1,0 +1,24 @@
+Ранжирование по Gain Ratio на обучающей выборке
+SPLIT_SEED=67, TEST_SIZE=0.2
+odor: 0.391017
+gill-size: 0.249915
+stalk-surface-above-ring: 0.236198
+spore-print-color: 0.220998
+ring-type: 0.209539
+bruises: 0.197044
+stalk-surface-below-ring: 0.196466
+gill-spacing: 0.159945
+gill-color: 0.138735
+stalk-color-above-ring: 0.131946
+veil-color: 0.120196
+stalk-color-below-ring: 0.119362
+population: 0.101156
+stalk-root: 0.099430
+ring-number: 0.085726
+gill-attachment: 0.077364
+habitat: 0.067432
+cap-shape: 0.029561
+cap-surface: 0.018085
+cap-color: 0.014465
+stalk-shape: 0.007549
+veil-type: 0.000000
